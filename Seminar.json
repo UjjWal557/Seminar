@@ -11,7 +11,10 @@
     "price": 26720,
     "description": "An intensive bootcamp covering all aspects of starting and scaling a business. Topics include idea validation, funding strategies, growth hacking, and building resilient business models.",
     "image":"Images/seminar1.jpeg",
-    "image_expert":"Images/expert1.jpeg"
+    "image_expert":"Images/expert1.jpg",
+    "part1": "10:00 - 10:40 Introduction",
+    "part2": "10:40 - 11:20 Keynote: The Future of Entrepreneurship",
+    "part3": "11:20 - 12:00 Workshop: Validating Your Business Idea"
   },
   {
     "title": "Machine Learning Fundamentals",
@@ -25,7 +28,10 @@
     "price": 10020,
     "description": "A beginner-friendly introduction to machine learning concepts, algorithms, and practical applications. Includes guided coding exercises using Python and popular ML libraries.",
     "image":"Images/seminar1.jpeg",
-    "image_expert":"Images/expert2.jpeg"
+    "image_expert":"Images/expert2.jpg",
+    "part1": "10:00 - 10:40 Introduction",
+    "part2": "10:40 - 11:20 Overview of ML",
+    "part3": "11:20 - 12:00 Hands-on: Building Your First ML Model"
   },
   {
     "title": "Sustainable Business Practices",
@@ -39,6 +45,9 @@
     "price": 23380,
     "description": "Transform your business with sustainable practices that benefit both the planet and your bottom line. Learn ESG reporting, circular economy principles, and green supply chain management.",
     "image":"Images/seminar1.jpeg",
-    "image_expert":"Images/expert3.jpeg"
+    "image_expert":"Images/expert3.jpg",
+    "part1": "10:00 - 10:40 Introduction",
+    "part2": "10:40 - 11:20 Keynote: The Future of Sustainable Business",
+    "part3": "11:20 - 12:00 Workshop: ESG Reporting Made Easy"
   }
 ]
