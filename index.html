@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Career Webinar | Ganpat University</title>
+  <title>Guni Webinar | Ganpat University</title>
   <style>
     /* Reset and Basic Styles */
     * {
@@ -46,6 +46,12 @@
     .logo {
       font-size: 24px;
       font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .log{
+        width: 180px;
+        height: 70px;
     }
     
     .main-nav ul {
@@ -273,21 +279,6 @@
       color: #555;
     }
     
-    .speaker-socials {
-      display: flex;
-      gap: 10px;
-    }
-    
-    .social-icon {
-      color: #666;
-      font-size: 1.1rem;
-      transition: color 0.3s;
-    }
-    
-    .social-icon:hover {
-      color: #4b91f1;
-    }
-    
     /* Webinar Agenda Section */
     .agenda-container {
       display: flex;
@@ -370,42 +361,7 @@
     .agenda-benefits .btn:hover {
       background-color: rgba(255, 255, 255, 0.9);
     }
-    
-    /* Testimonials Section */
-    .testimonials-container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 30px;
-    }
-    
-    .testimonial-card {
-      background-color: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-    
-    .testimonial-stars {
-      color: #ffc107;
-      margin-bottom: 15px;
-    }
-    
-    .testimonial-text {
-      font-style: italic;
-      margin-bottom: 20px;
-      color: #444;
-    }
-    
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-    }
-    
+
     .author-avatar {
       width: 50px;
       height: 50px;
@@ -586,7 +542,13 @@
       margin-right: 10px;
       margin-top: 5px;
     }
-    
+    /*contact-img*/
+    .contact-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
     /* Contact Section */
     .contact-container {
       display: flex;
@@ -764,7 +726,7 @@
     
     /* Seminar Cards Section */
     .seminar-section {
-      background-color: #f1f5f9;
+      background-color: #eee;
     }
     
     #seminar-container {
@@ -779,7 +741,6 @@
       overflow: hidden;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s, box-shadow 0.3s;
-      border-left: 5px solid #4b91f1;
       padding: 0;
     }
     
@@ -790,8 +751,18 @@
     
     .seminar-header {
       padding: 20px;
-      background-color: #f7f9fc;
+      background-color: white;
       border-bottom: 1px solid #eee;
+      overflow: hidden;
+      position: relative;
+      display: block;
+    }
+
+    .seminar-image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
     }
     
     .seminar h2 {
@@ -802,6 +773,7 @@
     
     .seminar-body {
       padding: 20px;
+      align-items: center;
     }
     
     .seminar-detail {
@@ -832,7 +804,7 @@
     
     .seminar-footer {
       padding: 15px 20px;
-      background-color: #f7f9fc;
+      background-color:  white;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -847,7 +819,7 @@
     
     .seminar-register {
       background-color: #4b91f1;
-      color: white;
+      color: #eee;
       padding: 8px 15px;
       border-radius: 5px;
       text-decoration: none;
@@ -874,7 +846,7 @@
     }
     
     .modal-content {
-      background-color: white;
+      background-color: #eee;
       width: 90%;
       max-width: 800px;
       margin: 0 auto;
@@ -979,7 +951,7 @@
   <!-- Header Section -->
   <header>
     <div class="container header-container">
-      <div class="logo">Career Webinar</div>
+        <img class="log" src="Images/seminar_title.png"><div class="logo">GUNI WEBINAR</div>
       <nav class="main-nav">
         <ul>
           <li><a href="#home">Home</a></li>
@@ -1011,8 +983,6 @@
           <span>Limited to 100 participants</span>
         </div>
       </div>
-      
-      <p>Bonus: Refer 5 friends and get a FREE group counselling session!</p>
       
       <div class="hero-buttons">
         <a href="#register" class="btn btn-primary">Register Now</a>
@@ -1077,49 +1047,7 @@
         <p>Industry professionals who will guide you toward career success</p>
       </div>
       
-      <div class="speakers-grid">
-        <div class="speaker-card">
-          <div class="speaker-image" id="img1"></div>
-          <div class="speaker-info">
-            <h3>Dr. Michael Bennett</h3>
-            <div class="speaker-title">Career Development Specialist</div>
-            <p class="speaker-bio">15+ years guiding professionals through career transitions with expertise in tech and finance sectors.</p>
-            <div class="speaker-socials">
-              <a href="#" class="social-icon">🐦</a>
-              <a href="#" class="social-icon">🔗</a>
-              <a href="#" class="social-icon">🌐</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="speaker-card">
-          <div class="speaker-image" id="img2"></div>
-          <div class="speaker-info">
-            <h3>Jessica Morgan, MBA</h3>
-            <div class="speaker-title">Executive Career Coach</div>
-            <p class="speaker-bio">Former HR Director helping professionals build personal brands and navigate corporate advancement.</p>
-            <div class="speaker-socials">
-              <a href="#" class="social-icon">🐦</a>
-              <a href="#" class="social-icon">🔗</a>
-              <a href="#" class="social-icon">🌐</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="speaker-card">
-          <div class="speaker-image" id="img3"></div>
-          <div class="speaker-info">
-            <h3>David Wilson, Ph.D.</h3>
-            <div class="speaker-title">Industry Transition Specialist</div>
-            <p class="speaker-bio">Researcher and strategist specializing in emerging career fields and skills for the future workforce.</p>
-            <div class="speaker-socials">
-              <a href="#" class="social-icon">🐦</a>
-              <a href="#" class="social-icon">🔗</a>
-              <a href="#" class="social-icon">🌐</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="speakers-grid" id="Speaker"></div>
     </div>
   </section>
 
@@ -1197,11 +1125,6 @@
             <div>Networking with like-minded professionals</div>
           </div>
           
-          <div class="benefit-item">
-            <div class="benefit-icon">✓</div>
-            <div>Exclusive referral program with valuable rewards</div>
-          </div>
-          
           <a href="#register" class="btn">Reserve Your Spot</a>
         </div>
       </div>
@@ -1220,56 +1143,7 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <div class="container">
-      <div class="section-title">
-        <h2>Success Stories</h2>
-        <p>Hear from participants who transformed their careers after our webinars</p>
-      </div>
-      
-      <div class="testimonials-container">
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"The webinar provided clarity when I was at a career crossroads. The personalized advice helped me pivot from finance to tech, resulting in a 30% salary increase."</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">MJ</div>
-              <div class="author-info">
-                <h4>Michael Johnson</h4>
-                <div class="author-title">Software Developer | Former Financial Analyst</div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"The referral program was a game-changer! My friends and I used our group session to practice interview skills. Four of us landed new jobs within two months!"</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">SP</div>
-              <div class="author-info">
-                <h4>Sarah Patel</h4>
-                <div class="author-title">Marketing Director | Career Changer</div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"As a recent graduate, I felt lost in the job market. The webinar gave me practical strategies that helped me secure my dream entry-level position within weeks."</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">JL</div>
-              <div class="author-info">
-                <h4>James Lee</h4>
-                <div class="author-title">Data Analyst | Recent Graduate</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  
   <!-- FAQs Section -->
   <section id="faq" style="background-color: #f1f5f9;">
     <div class="container">
@@ -1370,14 +1244,17 @@
           </div>
           
           <div class="form-group">
-            <label for="phone">Phone Number</label>
+            <label for="phone">Contact Number (Preferably Your WhatsApp Number)</label>
             <input type="tel" id="phone" name="phone" class="form-control" required>
           </div>
           
           <div class="form-row">
             <div class="form-group">
-              <label for="age">Age</label>
-              <input type="number" id="age" name="age" min="1" max="100" class="form-control" required>
+                <label>Seminar Mode</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="mode" value="Online" required> Online</label>
+                  <label><input type="radio" name="mode" value="Offline"> Offline</label>
+                </div>
             </div>
             
             <div class="form-group">
@@ -1391,14 +1268,14 @@
           </div>
           
           <div class="form-group">
-            <label for="career">Current Career Field</label>
+            <label for="career">Highest Qualification</label>
             <select id="career" name="career" class="form-control" required>
               <option value="">Select one</option>
               <option value="postgraduate">Post Graduate</option>
               <option value="undergraduate">Undergraduate</option>
-              <option value="highersecondary">Higher Secondary Class</option>
-              <option value="technology">Technology</option>
-              <option value="education">Education</option>
+              <option value="secondary">10th(Secondary School Education)</option>
+              <option value="highersecondary">12th(Higher Secondary School Education)</option>
+              <option value="highersecondary">Diploma Studies</option>
               <option value="other">Other</option>
             </select>
           </div>
@@ -1423,11 +1300,11 @@
           <ul class="benefits-list">
             <li>
               <i>✓</i>
-              <div>Live 2-hour interactive webinar with Q&A session</div>
+              <div>Live interactive webinar with experts and Q&A session</div>
             </li>
             <li>
               <i>✓</i>
-              <div>Downloadable career strategy resource pack</div>
+              <div>Study Resources and other materials</div>
             </li>
             <li>
               <i>✓</i>
@@ -1435,11 +1312,7 @@
             </li>
             <li>
               <i>✓</i>
-              <div>5 referral codes to share with friends</div>
-            </li>
-            <li>
-              <i>✓</i>
-              <div>Certificate of participation</div>
+              <div>E-Certificate of participation</div>
             </li>
           </ul>
         </div>
@@ -1462,8 +1335,8 @@
               <div class="contact-icon">📍</div>
               <div class="contact-details">
                 <h4>Our Location</h4>
-                <p>123 Career Avenue, Suite 456</p>
-                <p>New York, NY 10001, USA</p>
+                <p>Ganpat University, Mehsana</p>
+                <p>Gujarat, India</p>
               </div>
             </div>
             
@@ -1471,8 +1344,9 @@
               <div class="contact-icon">📞</div>
               <div class="contact-details">
                 <h4>Phone</h4>
-                <p>(123) 456-7890</p>
-                <p>Monday-Friday, 9AM-5PM EST</p>
+                <p>+917984011603</p>
+                <p>Prof. Yogesh Prajapati</p>
+                <p>Monday-Friday, 9AM-5PM IST</p>
               </div>
             </div>
             
@@ -1480,48 +1354,49 @@
               <div class="contact-icon">✉</div>
               <div class="contact-details">
                 <h4>Email</h4>
-                <p>info@careerwebinar.com</p>
-                <p>For general inquiries</p>
+                <p>yjp01@ganpatuniversity.ac.in</p>
               </div>
             </div>
           </div>
           
           <div class="contact-image">
-            <img src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Office space">
+            <img class="contact-img" src="Images/getintouch.jpeg" alt="getintouch" alt="Office space">
           </div>
         </div>
-        
         <div class="contact-form">
-          <h3>Contact Us</h3>
-          
-          <div class="form-group">
-            <label for="contact-name">Your Name</label>
-            <input type="text" id="contact-name" class="form-control" placeholder="John Smith">
-          </div>
-          
-          <div class="form-group">
-            <label for="contact-email">Email Address</label>
-            <input type="email" id="contact-email" class="form-control" placeholder="your.email@example.com">
-          </div>
-          
-          <div class="form-group">
-            <label for="contact-subject">Subject</label>
-            <select id="contact-subject" class="form-control">
-              <option value="">Select a subject</option>
-              <option value="registration">Registration Question</option>
-              <option value="technical">Technical Support</option>
-              <option value="content">Content Question</option>
-              <option value="partnership">Partnership Opportunity</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="contact-message">Your Message</label>
-            <textarea id="contact-message" class="form-control" placeholder="Please provide details about your inquiry..."></textarea>
-          </div>
-          
-          <button class="btn btn-primary">Send Message</button>
+          <form name="contact-form" action="" method="post">
+            <h3>Contact Us</h3>
+            
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <input type="text" id="contact-name"  name="name" class="form-control" placeholder="John Smith">
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email"  name="email" class="form-control" placeholder="your.email@example.com">
+            </div>
+            
+            <div class="form-group">
+                  <label for="contact-query">Query</label>
+              <div id="query" style="display: flex;flex-wrap: wrap;gap: 10px;margin-top: 5px;">
+                  <label><input type="checkbox" name="course"> Course Details</label>
+                  <label><input type="checkbox" name="transportation"> Transportation Details</label>
+                  <label><input type="checkbox" name="fee"> Fee Details</label>
+                  <label><input type="checkbox" name="placement"> Placement Details</label> 
+                  <label><input type="checkbox" name="hostel"> Hostel Details</label>
+                  <label><input type="checkbox" name="other"> Others</label>
+
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-message">Your Message</label>
+              <textarea id="contact-message" name="message" class="form-control" placeholder="Please provide details about your inquiry..."></textarea>
+            </div>
+            
+            <button class="btn btn-primary">Send Message</button>
+          </form>
         </div>
       </div>
     </div>
@@ -1532,13 +1407,13 @@
     <div class="container">
       <div class="footer-container">
         <div class="footer-column footer-about">
-          <h3>Career Webinar</h3>
-          <p>Empowering professionals to navigate their career paths with confidence and clarity.</p>
+          <h3>GUNI WEBINAR</h3>
+          <p>Empowering everyone to navigate their career paths with confidence and clarity with GUNI.</p>
           <div class="footer-socials">
-            <a href="#" class="social-circle">f</a>
-            <a href="#" class="social-circle">t</a>
-            <a href="#" class="social-circle">in</a>
-            <a href="#" class="social-circle">ig</a>
+            <a href="https://www.facebook.com/ganpatuni" class="social-circle">ⓕ</a>
+            <a href="https://x.com/Ganpat_Uni" class="social-circle">𝕏</a>
+            <a href="https://www.linkedin.com/school/ganpat-university" class="social-circle">in</a>
+            <a href="https://www.instagram.com/ganpatuniversity" class="social-circle">🅾</a>
           </div>
         </div>
         
@@ -1550,34 +1425,14 @@
             <li><a href="#seminars">Webinar Details</a></li>
             <li><a href="#speakers">Speakers</a></li>
             <li><a href="#register">Register</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-        </div>
-        
-        <div class="footer-column footer-links">
-          <h3>Resources</h3>
-          <ul>
-            <li><a href="#">Career Blog</a></li>
-            <li><a href="#">Success Stories</a></li>
-            <li><a href="#">Referral Program</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-column footer-newsletter">
-          <h3>Newsletter</h3>
-          <p>Subscribe to receive updates on upcoming webinars and career tips.</p>
-          <div class="newsletter-form">
-            <input type="email" class="newsletter-input" placeholder="Your email">
-            <button class="newsletter-btn">Subscribe</button>
-          </div>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2023 Career Webinar. All rights reserved.</p>
+        <p>&copy; 2025 GUNI WEBINAR. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -1590,13 +1445,8 @@
       .then(seminars => {
         const container = document.getElementById('seminar-container');
         const dropdown = document.getElementById('seminarDropdown');
-        const img1 = document.getElementById('img1');
-        const img2 = document.getElementById('img2');
-        const img3 = document.getElementById('img3');
-
-        img1.innerHTML = `<img src="" alt="${seminars[0].expert}">`
-        img2.innerHTML = `<img src="" alt="${seminars[1].expert}">`
-        img3.innerHTML = `<img src="" alt="${seminars[2].expert}">`
+        const experts = document.getElementById('Speaker');
+        
 
         const formatter = new Intl.NumberFormat('en-IN', {
           style: 'currency',
@@ -1611,9 +1461,16 @@
           div.className = 'seminar';
           div.innerHTML = `
             <div class="seminar-header">
-              <h2>${seminar.title}</h2>
+              <img class="seminar-image" src="${seminar.image}" alt="image loading">
             </div>
             <div class="seminar-body">
+              <div class="seminar-detail">
+                <div class="seminar-icon">📌</div>
+                <div class="seminar-detail-conte    nt">
+                  <span class="detail-label">Title:</span>
+                  <span>${seminar.title}</span>
+                </div>
+              </div>
               <div class="seminar-detail">
                 <div class="seminar-icon">👨‍🏫</div>
                 <div class="seminar-detail-content">
@@ -1656,6 +1513,22 @@
             </div>
           `;
           container.appendChild(div);
+
+          // Add Experts from JSON
+          const div1 = document.createElement('div1');
+          div1.className = 'speaker-card';
+          div1.innerHTML = `
+            <div class="speaker-image">
+              <img src="${seminar.image_expert}" alt="${seminar.expert}">  
+            </div>
+            <div class="speaker-info">
+              <h3>${seminar.expert}</h3>
+              <div class="speaker-title">${seminar.title} Specialist</div>
+              <p class="speaker-bio">${seminar.description}</p>
+            </div>
+          `;
+          experts.appendChild(div1);
+
 
           // Add to dropdown
           const option = document.createElement('option');
@@ -1717,13 +1590,15 @@
     // Form submission handling
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwH1UXJkwdQIWvznwJ3LqVxIn4TK7t7DbDU6krCqKJxChvRhwANsoI2Nzx8lk38Wb-I/exec'
     const form = document.forms['seminar-form']
+    const scriptURL1 = 'https://script.google.com/macros/s/AKfycbyY9VRTuqqC7v236r91K_XrMojwy14h7-KY6CJ6HelwlWye2vRNiU_k1ktbeXYs6vz4/exec'
+    const form1 = document.forms['contact-form']
 
     form.addEventListener('submit', e => {
       e.preventDefault();
       
       // Get all form data
       const formData = new FormData(form);
-      
+
       // Submit form data to Google Sheets
       fetch(scriptURL, { method: 'POST', body: formData })
         .then(response => {
@@ -1735,4 +1610,22 @@
           alert("There was an error processing your registration. Please try again.");
         });
     });
+
+    form1.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const formData1 = new FormData(form1);
+
+      fetch(scriptURL1, { method: 'POST', body: formData1 })
+        .then(response => {
+          alert("Thank you for your response! We'll contact you shortly.");
+          form1.reset();
+        })
+        .catch(error => {
+          console.error('Error submitting response:', error.message);
+          alert("There was an error processing your response. Please try again.");
+        });
+    })
+
+
   </script>
