@@ -2,132 +2,1602 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Seminar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Webinar | Ganpat University</title>
   <style>
+    /* Reset and Basic Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f2f4f8;
-      margin: 0;
-      padding: 40px 20px;
+      line-height: 1.6;
       color: #333;
+      background-color: #f5f7fa;
     }
-
-    h1, h2 {
-      text-align: center;
-      color: #1f3b57;
-      text-decoration: underline;
+    
+    h1, h2, h3 {
+      color: #222;
+      margin-bottom: 20px;
     }
-
-    .container, #seminar-container {
+    
+    .container {
       max-width: 1200px;
-      margin: 20px auto;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-
-    form {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-bottom: 60px;
+    
+    /* Header Styles */
+    header {
+      background-color: #051a39;
+      color: white;
+      padding: 15px 0;
     }
-
-    label {
-      display: block;
-      margin: 15px 0 5px;
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 24px;
       font-weight: bold;
     }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="number"],
-    select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    .gender-options {
+    
+    .main-nav ul {
       display: flex;
-      gap: 20px;
-      margin-top: 5px;
+      list-style: none;
     }
-
-    .gender-options input {
-      margin-right: 5px;
+    
+    .main-nav li {
+      margin-left: 20px;
     }
-
-    button {
-      background-color: #4CAF50;
+    
+    .main-nav a {
       color: white;
-      padding: 12px;
-      width: 100%;
-      border: none;
-      border-radius: 5px;
-      margin-top: 20px;
-      font-size: 16px;
+      text-decoration: none;
+      transition: color 0.3s;
     }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    #seminar-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .seminar {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
-      padding: 20px;
-      transition: transform 0.2s, box-shadow 0.2s;
-      border-left: 6px solid #4b91f1;
-    }
-
-    .seminar:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-    }
-
-    .seminar h2 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      color: #2c3e50;
-    }
-
-    .seminar p {
-      margin: 4px 0;
-      line-height: 1.5;
-    }
-
-    .seminar p strong {
+    
+    .main-nav a:hover {
       color: #4b91f1;
     }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 20px 10px;
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(5, 26, 57, 0.85), rgba(5, 26, 57, 0.85)), url('https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 0;
+      text-align: left;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 20px;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+    
+    .hero-details {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    
+    .hero-detail {
+      margin-right: 30px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .hero-detail i {
+      margin-right: 10px;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+      font-size: 16px;
+    }
+    
+    .btn-primary {
+      background-color: #4b91f1;
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: #3a7fd9;
+    }
+    
+    .btn-secondary {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+    
+    .btn-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Section Styles */
+    section {
+      padding: 70px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    
+    .section-title h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    
+    .section-title p {
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .section-title::after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 60px;
+      background-color: #4b91f1;
+      margin: 15px auto 0;
+    }
+    
+    /* About Section */
+    .about-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
+    
+    .about-text {
+      flex: 1;
+    }
+    
+    .about-text h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .about-features {
+      margin-top: 30px;
+    }
+    
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    
+    .feature-icon {
+      background-color: #e6f0ff;
+      color: #4b91f1;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+    
+    .about-image {
+      flex: 1;
+    }
+    
+    .about-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Expert Speakers Section */
+    .speakers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .speaker-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .speaker-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .speaker-image {
+      height: 250px;
+      overflow: hidden;
+    }
+    
+    .speaker-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .speaker-info {
+      padding: 20px;
+    }
+    
+    .speaker-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+    }
+    
+    .speaker-title {
+      color: #4b91f1;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    
+    .speaker-bio {
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    
+    .speaker-socials {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .social-icon {
+      color: #666;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    
+    .social-icon:hover {
+      color: #4b91f1;
+    }
+    
+    /* Webinar Agenda Section */
+    .agenda-container {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+    
+    .agenda-timeline {
+      flex: 1;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .timeline-item {
+      margin-bottom: 25px;
+      position: relative;
+    }
+    
+    .timeline-header {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    
+    .timeline-time {
+      font-weight: bold;
+      margin-right: 15px;
+      white-space: nowrap;
+    }
+    
+    .timeline-title {
+      font-weight: bold;
+    }
+    
+    .timeline-desc {
+      color: #666;
+      font-size: 0.95rem;
+      margin-left: 65px;
+    }
+    
+    .agenda-benefits {
+      flex: 1;
+      background-color: #4b91f1;
+      padding: 30px;
+      border-radius: 10px;
+      color: white;
+    }
+    
+    .agenda-benefits h3 {
+      color: white;
+      margin-bottom: 25px;
+    }
+    
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    
+    .benefit-icon {
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+    
+    .agenda-benefits .btn {
+      margin-top: 20px;
+      background-color: white;
+      color: #4b91f1;
+    }
+    
+    .agenda-benefits .btn:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* Testimonials Section */
+    .testimonials-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    
+    .testimonial-card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .testimonial-stars {
+      color: #ffc107;
+      margin-bottom: 15px;
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #eaeaea;
+      font-weight: bold;
+      color: #333;
+    }
+    
+    .author-info h4 {
+      margin-bottom: 3px;
+    }
+    
+    .author-title {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    /* FAQs Section */
+    .faqs-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .faq-item {
+      background-color: white;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .faq-question {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    
+    .faq-question .icon {
+      transform: rotate(0);
+      transition: transform 0.3s;
+    }
+    
+    .faq-question.active .icon {
+      transform: rotate(180deg);
+    }
+    
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s, padding 0.3s;
+    }
+    
+    .faq-answer.active {
+      padding: 0 20px 20px;
+      max-height: 200px;
+    }
+    
+    .faq-answer p {
+      color: #666;
+    }
+    
+    /* Registration Form Section */
+    .registration-section {
+      background-color: #f1f5f9;
+    }
+    
+    .registration-container {
+      display: flex;
+      gap: 40px;
+    }
+    
+    .registration-form {
+      flex: 1;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    
+    .form-control:focus {
+      border-color: #4b91f1;
+      outline: none;
+    }
+    
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .form-row .form-group {
+      flex: 1;
+    }
+    
+    .radio-group {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+      cursor: pointer;
+    }
+    
+    .radio-group input {
+      margin-right: 8px;
+    }
+    
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+    }
+    
+    .checkbox-group input {
+      margin-right: 10px;
+    }
+    
+    .registration-benefits {
+      flex: 1;
+      position: relative;
+    }
+    
+    .benefits-image {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+    
+    .benefits-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .benefits-list {
+      list-style: none;
+    }
+    
+    .benefits-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+    
+    .benefits-list li i {
+      color: #4b91f1;
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+    
+    /* Contact Section */
+    .contact-container {
+      display: flex;
+      gap: 40px;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    .contact-card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+    
+    .contact-item {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    
+    .contact-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background-color: #e6f0ff;
+      color: #4b91f1;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+    
+    .contact-details h4 {
+      margin-bottom: 5px;
+    }
+    
+    .contact-details p {
+      color: #666;
+    }
+    
+    .contact-form {
+      flex: 1;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .contact-form h3 {
+      margin-bottom: 25px;
+    }
+    
+    textarea.form-control {
+      resize: vertical;
+      min-height: 150px;
+    }
+    
+    /* Footer Section */
+    footer {
+      background-color: #051a39;
+      color: #aaa;
+      padding: 60px 0 20px;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    
+    .footer-column h3 {
+      color: white;
+      margin-bottom: 25px;
+      font-size: 1.2rem;
+    }
+    
+    .footer-about p {
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    
+    .footer-socials {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+    
+    .social-circle:hover {
+      background-color: #4b91f1;
+      color: white;
+    }
+    
+    .footer-links ul {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-links a {
+      color: #aaa;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #4b91f1;
+    }
+    
+    .footer-newsletter p {
+      margin-bottom: 20px;
+    }
+    
+    .newsletter-form {
+      display: flex;
+    }
+    
+    .newsletter-input {
+      flex: 1;
+      padding: 10px 15px;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 5px 0 0 5px;
+    }
+    
+    .newsletter-input::placeholder {
+      color: #aaa;
+    }
+    
+    .newsletter-btn {
+      background-color: #4b91f1;
+      color: white;
+      border: none;
+      padding: 0 15px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .newsletter-btn:hover {
+      background-color: #3a7fd9;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-bottom p {
+      font-size: 0.9rem;
+    }
+    
+    /* Seminar Cards Section */
+    .seminar-section {
+      background-color: #f1f5f9;
+    }
+    
+    #seminar-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+    
+    .seminar {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-left: 5px solid #4b91f1;
+      padding: 0;
+    }
+    
+    .seminar:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .seminar-header {
+      padding: 20px;
+      background-color: #f7f9fc;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .seminar h2 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: #333;
+    }
+    
+    .seminar-body {
+      padding: 20px;
+    }
+    
+    .seminar-detail {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    
+    .seminar-detail:last-child {
+      margin-bottom: 0;
+    }
+    
+    .seminar-icon {
+      width: 20px;
+      color: #4b91f1;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+    
+    .seminar-detail-content {
+      flex: 1;
+    }
+    
+    .detail-label {
+      font-weight: 600;
+      margin-right: 5px;
+    }
+    
+    .seminar-footer {
+      padding: 15px 20px;
+      background-color: #f7f9fc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #eee;
+    }
+    
+    .seminar-price {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #4b91f1;
+    }
+    
+    .seminar-register {
+      background-color: #4b91f1;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+    
+    .seminar-register:hover {
+      background-color: #3a7fd9;
+    }
+    
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      overflow-y: auto;
+      padding: 50px 0;
+    }
+    
+    .modal-content {
+      background-color: white;
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+    
+    .modal-header {
+      padding: 25px;
+      background-color: #4b91f1;
+      color: white;
+      position: relative;
+    }
+    
+    .modal-header h3 {
+      margin: 0;
+      color: white;
+    }
+    
+    .modal-close {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    
+    .modal-close:hover {
+      color: #ffcc00;
+    }
+    
+    .modal-body {
+      padding: 25px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .logo {
+        margin-bottom: 15px;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .contact-container,
+      .registration-container,
+      .agenda-container,
+      .about-content {
+        flex-direction: column;
+      }
+      
+      .form-row {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .main-nav li {
+        margin: 5px 10px;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero-details {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+      }
+      
+      .footer-container {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Seminar Details</h1>
-    <div id="seminar-container"></div>
-  </div>
+  <!-- Header Section -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">Career Webinar</div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#seminars">Seminars</a></li>
+          <li><a href="#register">Register</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Shape Your Future Career Path</h1>
+      <p>Join our exclusive career counselling webinar and discover the opportunities waiting for you.</p>
+      
+      <div class="hero-details">
+        <div class="hero-detail">
+          <i class="icon">📅</i>
+          <span>June 15, 2023 | 10:00 AM</span>
+        </div>
+        <div class="hero-detail">
+          <i class="icon">👥</i>
+          <span>Limited to 100 participants</span>
+        </div>
+      </div>
+      
+      <p>Bonus: Refer 5 friends and get a FREE group counselling session!</p>
+      
+      <div class="hero-buttons">
+        <a href="#register" class="btn btn-primary">Register Now</a>
+        <a href="#about" class="btn btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About Our Career Counselling Webinar</h2>
+        <p>Designed to help students and professionals navigate their career paths with confidence and clarity.</p>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <h3>Why Attend Our Webinar?</h3>
+          
+          <div class="about-features">
+            <div class="feature">
+              <div class="feature-icon">✓</div>
+              <div>
+                <strong>Expert Guidance</strong>
+                <p>Learn from industry professionals with proven track records in career development.</p>
+              </div>
+            </div>
+            
+            <div class="feature">
+              <div class="feature-icon">✓</div>
+              <div>
+                <strong>Personalized Insights</strong>
+                <p>Gain tailored advice that aligns with your skills, interests, and career aspirations.</p>
+              </div>
+            </div>
+            
+            <div class="feature">
+              <div class="feature-icon">✓</div>
+              <div>
+                <strong>Networking Opportunities</strong>
+                <p>Connect with like-minded individuals and expand your professional network.</p>
+              </div>
+            </div>
+            
+            <a href="#register" class="btn btn-primary">Secure Your Spot</a>
+          </div>
+        </div>
+        
+        <div class="about-image">
+          <img src="Images/guni.jpeg" alt="GUNI IMAGE">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expert Speakers Section -->
+  <section id="speakers" style="background-color: #f1f5f9;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Meet Our Expert Speakers</h2>
+        <p>Industry professionals who will guide you toward career success</p>
+      </div>
+      
+      <div class="speakers-grid">
+        <div class="speaker-card">
+          <div class="speaker-image" id="img1"></div>
+          <div class="speaker-info">
+            <h3>Dr. Michael Bennett</h3>
+            <div class="speaker-title">Career Development Specialist</div>
+            <p class="speaker-bio">15+ years guiding professionals through career transitions with expertise in tech and finance sectors.</p>
+            <div class="speaker-socials">
+              <a href="#" class="social-icon">🐦</a>
+              <a href="#" class="social-icon">🔗</a>
+              <a href="#" class="social-icon">🌐</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="speaker-card">
+          <div class="speaker-image" id="img2"></div>
+          <div class="speaker-info">
+            <h3>Jessica Morgan, MBA</h3>
+            <div class="speaker-title">Executive Career Coach</div>
+            <p class="speaker-bio">Former HR Director helping professionals build personal brands and navigate corporate advancement.</p>
+            <div class="speaker-socials">
+              <a href="#" class="social-icon">🐦</a>
+              <a href="#" class="social-icon">🔗</a>
+              <a href="#" class="social-icon">🌐</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="speaker-card">
+          <div class="speaker-image" id="img3"></div>
+          <div class="speaker-info">
+            <h3>David Wilson, Ph.D.</h3>
+            <div class="speaker-title">Industry Transition Specialist</div>
+            <p class="speaker-bio">Researcher and strategist specializing in emerging career fields and skills for the future workforce.</p>
+            <div class="speaker-socials">
+              <a href="#" class="social-icon">🐦</a>
+              <a href="#" class="social-icon">🔗</a>
+              <a href="#" class="social-icon">🌐</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Webinar Agenda Section -->
+  <section id="agenda">
+    <div class="container">
+      <div class="section-title">
+        <h2>Webinar Agenda</h2>
+        <p>Everything you need to know about our comprehensive career counselling session</p>
+      </div>
+      
+      <div class="agenda-container">
+        <div class="agenda-timeline">
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-time">10:00 - 10:15</div>
+              <div class="timeline-title">Introduction</div>
+            </div>
+            <div class="timeline-desc">Welcome and overview of the session</div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-time">10:15 - 10:45</div>
+              <div class="timeline-title">Career Landscape</div>
+            </div>
+            <div class="timeline-desc">Current trends and future outlook</div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-time">10:45 - 11:15</div>
+              <div class="timeline-title">Self-Assessment</div>
+            </div>
+            <div class="timeline-desc">Identifying your strengths and interests</div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-time">11:15 - 11:45</div>
+              <div class="timeline-title">Career Path Mapping</div>
+            </div>
+            <div class="timeline-desc">Strategies for creating your career roadmap</div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-time">11:45 - 12:00</div>
+              <div class="timeline-title">Q&A Session</div>
+            </div>
+            <div class="timeline-desc">Interactive dialogue with our experts</div>
+          </div>
+        </div>
+        
+        <div class="agenda-benefits">
+          <h3>Why This Webinar?</h3>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <div>Expert-led guidance from industry professionals</div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <div>Interactive session with personalized insights</div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <div>Actionable steps to advance your career</div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <div>Networking with like-minded professionals</div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <div>Exclusive referral program with valuable rewards</div>
+          </div>
+          
+          <a href="#register" class="btn">Reserve Your Spot</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Available Seminars Section -->
+  <section id="seminars" class="seminar-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Seminar Details</h2>
+        <p>Explore our upcoming professional seminars to accelerate your career growth</p>
+      </div>
+      
+      <div id="seminar-container"></div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>Success Stories</h2>
+        <p>Hear from participants who transformed their careers after our webinars</p>
+      </div>
+      
+      <div class="testimonials-container">
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"The webinar provided clarity when I was at a career crossroads. The personalized advice helped me pivot from finance to tech, resulting in a 30% salary increase."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MJ</div>
+              <div class="author-info">
+                <h4>Michael Johnson</h4>
+                <div class="author-title">Software Developer | Former Financial Analyst</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"The referral program was a game-changer! My friends and I used our group session to practice interview skills. Four of us landed new jobs within two months!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SP</div>
+              <div class="author-info">
+                <h4>Sarah Patel</h4>
+                <div class="author-title">Marketing Director | Career Changer</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"As a recent graduate, I felt lost in the job market. The webinar gave me practical strategies that helped me secure my dream entry-level position within weeks."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">JL</div>
+              <div class="author-info">
+                <h4>James Lee</h4>
+                <div class="author-title">Data Analyst | Recent Graduate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section id="faq" style="background-color: #f1f5f9;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to common questions about our webinar and referral program</p>
+      </div>
+      
+      <div class="faqs-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <div>What topics will be covered in the webinar?</div>
+            <div class="icon">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>Our webinar covers career trend analysis, personal skill assessment, strategic career planning, effective networking, and industry-specific guidance. Each session also includes personalized Q&A opportunities.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <div>How long is the webinar?</div>
+            <div class="icon">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>The main webinar session runs for 2 hours (10:00 AM - 12:00 PM EST). We recommend setting aside an additional 15 minutes at the end for any follow-up questions you might have.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <div>Can I get a refund if I can't attend?</div>
+            <div class="icon">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we offer full refunds if requested at least 48 hours before the webinar. Alternatively, you can transfer your registration to a future session or receive access to the recorded version.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <div>Will there be individual attention during the webinar?</div>
+            <div class="icon">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>While the main session is presented to all participants, we include interactive elements and a dedicated Q&A period. For more personalized guidance, we recommend our one-on-one counseling sessions available as an add-on.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <div>How does the referral program work?</div>
+            <div class="icon">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>After registering, you'll receive a unique referral code. Share this with friends or colleagues. When five people register using your code, you'll automatically qualify for a free 1-hour group counseling session worth $200.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <div>What technology is required to participate?</div>
+            <div class="icon">▼</div>
+          </div>
+          <div class="faq-answer">
+            <p>You'll need a computer or tablet with internet access, a web browser, and audio capabilities. We use Zoom for our webinars, which can be accessed through your browser or by downloading the free Zoom application.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Form Section -->
+  <section id="register" class="registration-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Seminar Registration Form</h2>
+        <p>Secure your spot today and take the first step toward advancing your career</p>
+      </div>
+      
+      <div class="registration-container">
+        <form name="seminar-form" class="registration-form" method="post" action="">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" class="form-control" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="form-control" required>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="number" id="age" name="age" min="1" max="100" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="radio-group">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="career">Current Career Field</label>
+            <select id="career" name="career" class="form-control" required>
+              <option value="">Select one</option>
+              <option value="postgraduate">Post Graduate</option>
+              <option value="undergraduate">Undergraduate</option>
+              <option value="highersecondary">Higher Secondary Class</option>
+              <option value="technology">Technology</option>
+              <option value="education">Education</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="seminarDropdown">Select Seminar</label>
+            <select id="seminarDropdown" name="seminar" class="form-control" required>
+              <option value="">Loading seminar list...</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Register Now</button>
+        </form>
+        
+        <div class="registration-benefits">
+          <div class="benefits-image">
+            <img src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Person working on laptop">
+          </div>
+          
+          <h3>What You'll Get</h3>
+          
+          <ul class="benefits-list">
+            <li>
+              <i>✓</i>
+              <div>Live 2-hour interactive webinar with Q&A session</div>
+            </li>
+            <li>
+              <i>✓</i>
+              <div>Downloadable career strategy resource pack</div>
+            </li>
+            <li>
+              <i>✓</i>
+              <div>30-day access to webinar recording</div>
+            </li>
+            <li>
+              <i>✓</i>
+              <div>5 referral codes to share with friends</div>
+            </li>
+            <li>
+              <i>✓</i>
+              <div>Certificate of participation</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Get in Touch</h2>
+        <p>Have questions? We're here to help you navigate your career journey</p>
+      </div>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-details">
+                <h4>Our Location</h4>
+                <p>123 Career Avenue, Suite 456</p>
+                <p>New York, NY 10001, USA</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <p>(123) 456-7890</p>
+                <p>Monday-Friday, 9AM-5PM EST</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">✉</div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>info@careerwebinar.com</p>
+                <p>For general inquiries</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-image">
+            <img src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Office space">
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Contact Us</h3>
+          
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" class="form-control" placeholder="John Smith">
+          </div>
+          
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" class="form-control" placeholder="your.email@example.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <select id="contact-subject" class="form-control">
+              <option value="">Select a subject</option>
+              <option value="registration">Registration Question</option>
+              <option value="technical">Technical Support</option>
+              <option value="content">Content Question</option>
+              <option value="partnership">Partnership Opportunity</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="contact-message">Your Message</label>
+            <textarea id="contact-message" class="form-control" placeholder="Please provide details about your inquiry..."></textarea>
+          </div>
+          
+          <button class="btn btn-primary">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-column footer-about">
+          <h3>Career Webinar</h3>
+          <p>Empowering professionals to navigate their career paths with confidence and clarity.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-circle">f</a>
+            <a href="#" class="social-circle">t</a>
+            <a href="#" class="social-circle">in</a>
+            <a href="#" class="social-circle">ig</a>
+          </div>
+        </div>
+        
+        <div class="footer-column footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#seminars">Webinar Details</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column footer-links">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Career Blog</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">Referral Program</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Subscribe to receive updates on upcoming webinars and career tips.</p>
+          <div class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your email">
+            <button class="newsletter-btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 Career Webinar. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
   <script>
+    // Fetch and display seminars
     fetch('Seminar.json')
       .then(response => response.json())
       .then(seminars => {
         const container = document.getElementById('seminar-container');
         const dropdown = document.getElementById('seminarDropdown');
+        const img1 = document.getElementById('img1');
+        const img2 = document.getElementById('img2');
+        const img3 = document.getElementById('img3');
+
+        img1.innerHTML = `<img src="" alt="${seminars[0].expert}">`
+        img2.innerHTML = `<img src="" alt="${seminars[1].expert}">`
+        img3.innerHTML = `<img src="" alt="${seminars[2].expert}">`
+
         const formatter = new Intl.NumberFormat('en-IN', {
           style: 'currency',
           currency: 'INR'
@@ -140,13 +1610,50 @@
           const div = document.createElement('div');
           div.className = 'seminar';
           div.innerHTML = `
-            <h2>${seminar.title}</h2>
-            <p><strong>Expert:</strong> ${seminar.expert}</p>
-            <p><strong>Duration:</strong> ${seminar.duration}</p>
-            <p><strong>Dates:</strong> ${seminar.beginning_date} – ${seminar.end_date}</p>
-            <p><strong>Venue:</strong> ${seminar.venue}</p>
-            <p><strong>Mode:</strong> ${seminar.mode}</p>
-            <p><strong>Price:</strong> ${formatter.format(seminar.price)}</p>
+            <div class="seminar-header">
+              <h2>${seminar.title}</h2>
+            </div>
+            <div class="seminar-body">
+              <div class="seminar-detail">
+                <div class="seminar-icon">👨‍🏫</div>
+                <div class="seminar-detail-content">
+                  <span class="detail-label">Expert:</span>
+                  <span>${seminar.expert}</span>
+                </div>
+              </div>
+              <div class="seminar-detail">
+                <div class="seminar-icon">📅</div>
+                <div class="seminar-detail-content">
+                  <span class="detail-label">Dates:</span>
+                  <span>${seminar.beginning_date} – ${seminar.end_date}</span>
+                </div>
+              </div>
+              <div class="seminar-detail">
+                <div class="seminar-icon">⏱</div>
+                <div class="seminar-detail-content">
+                  <span class="detail-label">Duration:</span>
+                  <span>${seminar.duration}</span>
+                </div>
+              </div>
+              <div class="seminar-detail">
+                <div class="seminar-icon">📍</div>
+                <div class="seminar-detail-content">
+                  <span class="detail-label">Venue:</span>
+                  <span>${seminar.venue}</span>
+                </div>
+              </div>
+              <div class="seminar-detail">
+                <div class="seminar-icon">🌐</div>
+                <div class="seminar-detail-content">
+                  <span class="detail-label">Mode:</span>
+                  <span>${seminar.mode}</span>
+                </div>
+              </div>
+            </div>
+            <div class="seminar-footer">
+              <div class="seminar-price">${formatter.format(seminar.price)}</div>
+              <a href="#register" class="seminar-register" onclick="selectSeminar('${seminar.title}')">Register Now</a>
+            </div>
           `;
           container.appendChild(div);
 
@@ -162,70 +1669,70 @@
         const dropdown = document.getElementById('seminarDropdown');
         dropdown.innerHTML = '<option>Error loading seminar list</option>';
       });
-      const express = require('express');
-      const cors = require('cors');
-      const app = express();
 
-      app.use(cors());
-  </script>
-  <div class="container">
-    <h1>Seminar Registration Form</h1>
-    <form name="seminar-form" method="post" action="">
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="fname" required />
+    // Function to pre-select seminar in dropdown
+    function selectSeminar(title) {
+      const dropdown = document.getElementById('seminarDropdown');
+      dropdown.value = title;
+    }
 
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lname" required />
+    // FAQ accordion functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const isActive = question.classList.contains('active');
+        
+        // Close all other answers
+        document.querySelectorAll('.faq-question').forEach(q => {
+          q.classList.remove('active');
+          q.nextElementSibling.classList.remove('active');
+        });
+        
+        // Toggle current answer
+        if (!isActive) {
+          question.classList.add('active');
+          answer.classList.add('active');
+        }
+      });
+    });
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required />
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required />
-
-      <label for="age">Age</label>
-      <input type="number" id="age" name="age" min="1" max="100" required />
-
-      <label>Gender</label>
-      <div class="gender-options">
-        <label><input type="radio" name="gender" value="male" required /> Male</label>
-        <label><input type="radio" name="gender" value="female" /> Female</label>
-        <label><input type="radio" name="gender" value="other" /> Other</label>
-      </div>
-
-      <label for="career">Current Career Field</label>
-      <select id="career" name="career" required>
-        <option value="">Select one</option>
-        <option value="postgraduate">Post Graduate</option>
-        <option value="undergraduate">Undergraduate</option>
-        <option value="highersecondary">Higher Secondary Class</option>
-        <option value="technology">Technology</option>
-        <option value="education">Education</option>
-        <option value="other">Other</option>
-      </select>
-
-      <label for="seminar">Select Seminar</label>
-      <select id="seminarDropdown" name="seminar" required>
-        <option value="">Loading seminar list...</option>
-      </select>
-
-      <button type="submit">Register Now</button>
-    </form>
-  </div>
-  <script>
+    // Form submission handling
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwH1UXJkwdQIWvznwJ3LqVxIn4TK7t7DbDU6krCqKJxChvRhwANsoI2Nzx8lk38Wb-I/exec'
     const form = document.forms['seminar-form']
 
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => alert("Registration successful!"))
-        .then(() => {
-          form.reset()
+      e.preventDefault();
+      
+      // Get all form data
+      const formData = new FormData(form);
+      
+      // Submit form data to Google Sheets
+      fetch(scriptURL, { method: 'POST', body: formData })
+        .then(response => {
+          alert("Registration successful! We'll send you a confirmation email shortly.");
+          form.reset();
         })
-        .catch(error => console.error('Error!', error.message))
-    })
+        .catch(error => {
+          console.error('Error submitting form:', error.message);
+          alert("There was an error processing your registration. Please try again.");
+        });
+    });
   </script>
-
-</body>
-</html>
